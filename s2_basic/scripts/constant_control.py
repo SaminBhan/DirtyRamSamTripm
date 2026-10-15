@@ -19,9 +19,9 @@ class ConstantControl(Node):
 
 	def vel_callback(self) -> None:
 		msg = Twist()  # every field starts at 0.0
-		# go in a circle with radius 5m at 0.5 m/s
-		msg.linear.x = 0.5
-		msg.angular.z = 0.1
+		# spin in place at 1 rad/s so the stop on /kill is obvious
+		msg.linear.x = 0.0
+		msg.angular.z = 1.0
 
 		self.pub_vel.publish(msg)
 
