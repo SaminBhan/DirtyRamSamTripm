@@ -10,7 +10,7 @@ def generate_launch_description():
         package="s3_basic",
         executable="constant_control.py",
         output="screen",
-        parameters=[{"use_sim_time": True}]
+        parameters=[{"use_sim_time": False}]
     )
 
     # Launches RViz with your configuration file
@@ -19,7 +19,7 @@ def generate_launch_description():
         package="rviz2",
         executable="rviz2",
         arguments=["-d", rviz_config],
-        parameters=[{"use_sim_time": True}]
+        parameters=[{"use_sim_time": False}]
     )
 
     return LaunchDescription([
